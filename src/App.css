@@ -1,0 +1,16 @@
+body {
+    background-color: lightcyan;
+}
+.main {
+    display: grid;
+    font-family: "din", -apple-system, system, sans-serif;
+    color: #4b423c;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.loginButton {
+
+}
