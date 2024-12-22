@@ -1,0 +1,33 @@
+.navTab {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+    width: 100%;
+    padding: 20px 3%;
+    z-index: 1;
+    overflow: hidden;
+    border-bottom: #4b423c solid;
+    border-radius: 1px;
+}
+.navTab .logo {
+    color: #4b423c;
+    text-decoration: none;
+    font-size: 2em;
+}
+    .navTab ul {
+        position: relative;
+        align-items: center;
+        display: flex;
+        gap: 30px;
+    }
+
+        .navTab ul li {
+            list-style: none;
+        }
+
+            .navTab ul li a {
+                text-decoration: none;
+                color: #4b423c;
+            }

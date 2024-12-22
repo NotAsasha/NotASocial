@@ -2,10 +2,11 @@ import GoogleLoginButton from '../components/googleLoginButton'
 import { useState } from "react";
 import { useAuth } from '../AuthContext';
 
-export default function Login() {
+export default function Register() {
     const { setUser } = useAuth();
     const [formData, setFormData] = useState({
         username: "",
+        email: "",
         password: "",
     });
     const handleChange = (e) => {
@@ -14,7 +15,7 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/login", {
+            const response = await fetch("/api/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -33,15 +34,26 @@ export default function Login() {
         <>
             <div className="registerBox">
                 <form onSubmit={handleSubmit}>
-                    <h2>Login</h2>
+                    <h2>Register</h2>
                     <br />
                     <div>
-                        <h3>Username or Email: </h3>
+                        <h3>Username: </h3>
                         <input
                             type="text"
                             name="username"
-                            placeholder="What we know about you?"
+                            placeholder="Your unique username"
                             value={formData.username}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <h3>E-mail: </h3>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="No, we will not spam ads"
+                            value={formData.email}
                             onChange={handleChange}
                             required
                         />

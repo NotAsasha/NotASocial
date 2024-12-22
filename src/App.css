@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #4b423c;
+}
 body {
     background-color: lightcyan;
 }
@@ -11,6 +18,19 @@ body {
     width: 100%;
     
 }
+.registerBox {
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #C0E9EA;
+    border: #4b423c 2px solid;
+    width: auto;
+}
 .loginButton {
-
+    display: grid;
+    justify-content:center;
+    gap:10px;
+    width: 100%;
 }
