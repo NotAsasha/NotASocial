@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import './navBar.css'
 export default function NavBar() {
-    const email = localStorage.getItem('email');
+    const token = localStorage.getItem('token');
 
-    const authLink = email ? (
-        <li><Link to="/profile">{email}</Link></li>
+    const authLink = token ? (
+        <li><Link to="/profile">{token}</Link></li>
     ) : (
         <li><Link to="/register">Sign Up</Link></li>
     );
